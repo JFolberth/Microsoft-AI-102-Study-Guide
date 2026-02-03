@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "microsoft-docs": {
+      "type": "http",
+      "url": "https://mcp.microsoft.com/sse",
+      "description": "Microsoft Learn Documentation MCP Server - Provides access to official Microsoft documentation for Azure AI services, including search and fetch capabilities for the latest documentation.",
+      "headers": {}
+    }
+  }
+}
