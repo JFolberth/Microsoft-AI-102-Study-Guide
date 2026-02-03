@@ -72,3 +72,49 @@ While this guide references official Microsoft Azure documentation, validate det
   - [Useful Links (official docs)](guide/useful-links.md)
 
 ---
+
+## 🎯 Interactive Quiz
+
+This repository includes an interactive quiz agent to help you test your knowledge and prepare for the AI-102 certification exam.
+
+### How to Use the Quiz Agent
+
+1. **In VS Code with GitHub Copilot Chat**: Open the chat panel and invoke the quiz agent by typing:
+   ```
+   @quiz start a quiz
+   ```
+
+2. **Quiz Features**:
+   - Multiple-choice questions covering all study guide topics
+   - Detailed explanations for correct and incorrect answers
+   - Progress tracking and score reporting
+   - Links to official Microsoft Learn documentation
+
+### MCP Server Configuration
+
+The quiz agent uses the Microsoft Learn MCP (Model Context Protocol) server to fetch the latest official documentation. The configuration is included in `.vscode/mcp.json`.
+
+**To enable the MCP server:**
+
+1. Ensure you have VS Code with GitHub Copilot Chat extension installed
+2. The MCP configuration will be automatically loaded from `.vscode/mcp.json`
+3. The server provides access to:
+   - `microsoft_docs_search` - Search Microsoft Learn documentation
+   - `microsoft_docs_fetch` - Fetch complete documentation pages
+   - `microsoft_code_sample_search` - Find official code samples
+
+**Manual MCP Configuration** (if needed):
+
+Add to your VS Code settings or `.vscode/mcp.json`:
+```json
+{
+  "servers": {
+    "microsoft-docs": {
+      "type": "http",
+      "url": "https://mcp.microsoft.com/sse"
+    }
+  }
+}
+```
+
+---
